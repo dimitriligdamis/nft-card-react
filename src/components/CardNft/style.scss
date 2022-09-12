@@ -1,0 +1,79 @@
+@use "/src/styles/vars";
+
+.CardNft {
+  background-color: vars.$bg-card;
+  padding: 1.5rem;
+  max-width: 330px;
+  border-radius: 10px;
+
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 1.3rem 0;
+  }
+
+  &__description {
+    font-weight: 300;
+    color: vars.$soft-blue;
+    line-height: 1.5;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid vars.$color-line;
+    padding: 0.8rem 0;
+    margin-bottom: 1rem;
+  }
+
+  &__eth {
+    color: vars.$cyan;
+
+    &::before {
+      content: "";
+      display: block;
+      background: url("../../assets/images/icon-ethereum.svg") no-repeat;
+      width: 11px;
+      height: 18px;
+      float: left;
+      margin: 0 6px 0 0;
+    }
+  }
+
+  &__days-left {
+    color: vars.$soft-blue;
+
+    &::before {
+      content: "";
+      display: block;
+      background: url("../../assets/images/icon-clock.svg") no-repeat;
+      width: 17px;
+      height: 17px;
+      float: left;
+      margin: 0 6px 0 0;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+
+  &__avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid vars.$white;
+  }
+
+  &__createby {
+    color: vars.$soft-blue;
+  }
+}

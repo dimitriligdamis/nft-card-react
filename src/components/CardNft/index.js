@@ -14,7 +14,7 @@ export default function CardNft() {
       </div>
       <div className='CardNft__info'>
         <img className='CardNft__avatar' src={avatar} alt='avatar' />
-        <h3 className='CardNft__author'>Creation of Jules Wyvern</h3>
+        <h3 className='CardNft__author'><span className='CardNft__createby'>Creation of</span> Jules Wyvern</h3>
       </div>
     </div>
   )
