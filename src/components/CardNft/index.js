@@ -9,8 +9,8 @@ export default function CardNft() {
     <div className='CardNft'>
       <div className='CardNft__img-container'>
         <img className='CardNft__img' src={equilibrium} alt='equilibrium' />
-        <div class="CardNft__middle">
-          <img class="CardNft__icon" src={view} alt='view' />
+        <div className="CardNft__middle">
+          <img className="CardNft__icon" src={view} alt='view' />
         </div>
       </div>
       <h1 className='CardNft__name'>Equilibrium #3429</h1>
