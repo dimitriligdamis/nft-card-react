@@ -5,21 +5,60 @@
   padding: 1.5rem;
   max-width: 330px;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  &__img-container {
+    border-radius: 10px;
+    position: relative;
+    width: 100%;
+  }
+
 
   &__img {
-    width: 100%;
+    opacity: 1;
+    display: block;
     border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+
+  &__middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &__img-container:hover {
+    background-color: vars.$cyan;
+    cursor: pointer;
+  }
+
+  &__img-container:hover &__img {
+    opacity: 0.3;
+  }
+
+  &__img-container:hover &__middle {
+    opacity: 1;
   }
 
   &__name {
+    color: vars.$white;
     font-size: 1.6rem;
     font-weight: 600;
     margin: 1.3rem 0;
+
+    &:hover {
+      color: vars.$cyan;
+      cursor: pointer;
+    }
   }
 
   &__description {
     font-weight: 300;
-    color: vars.$soft-blue;
     line-height: 1.5;
   }
 
@@ -46,7 +85,6 @@
   }
 
   &__days-left {
-    color: vars.$soft-blue;
 
     &::before {
       content: "";
@@ -74,6 +112,11 @@
   }
 
   &__createby {
-    color: vars.$soft-blue;
+    color: vars.$white;
+
+    &:hover {
+      color: vars.$cyan;
+      cursor: pointer;
+    }
   }
 }
